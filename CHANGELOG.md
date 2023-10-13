@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.4.0
+
+- Reverted scope to `YYYY-MM-DD` in commit `80ca7b2a`
+- Edit Original [Readme](README.md)
+- Remove GitHub CI action
+
 ## v0.3.0
 
 *Released: December 4th 2021*
@@ -10,7 +16,7 @@
 
 *Released: February 9th 2020*
 
-- Scope the files to `YYYY-MM` instead of `YYYY-MM-DD`
+- Scope the files to `YYYY-MM` instead of `YYYY-MM-DD` 
 - Change default notes directory to `$HOME/notes`
 - Offer to create the notes directory if it doesn't exist
 
