@@ -34,7 +34,9 @@ if [ ${#} -eq 0 ]; then
     if [ -p "/dev/stdin" ]; then
         (cat; printf "\n\n") >> "${NOTES_PATH}"
     else
-        eval "${NOTES_EDITOR}" "${NOTES_PATH}"
+        # Escape quotes and backslashes for safe shell command usage.
+        escaped_notes_path=$(printf '%q' "${NOTES_PATH}")
+        eval "${NOTES_EDITOR}" "${escaped_notes_path}"
     fi
 else
     printf "%s\n\n" "${*}" >> "${NOTES_PATH}"
